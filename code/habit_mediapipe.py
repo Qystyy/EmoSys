@@ -10,6 +10,7 @@ Detects: head scratching, nose scratching, head tilting, hand-to-face movements
 NOT REALLY IN USE
 - The Gesture model is mostly in use
 
+PERSONAL ARCHIVE PURPOSES
 """
 
 import numpy as np

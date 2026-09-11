@@ -5,7 +5,7 @@ Inference test but the tflite file just train with QAT
 
 - Maybe the use of old model
 
-
+PERSONAL ARCHIVE PURPOSES
 """
 
 import cv2
