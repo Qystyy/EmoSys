@@ -1,3 +1,12 @@
+"""
+This is mostly to just test how the compound emotion output with the PI CAM.
+
+Usage: 
+- Use for observation only 
+- informal use to the model performance with the picam and rp5
+
+"""
+
 import cv2
 import numpy as np
 import os
