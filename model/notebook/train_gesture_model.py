@@ -1,3 +1,13 @@
+"""
+Gesture Model Training - updated 11/9/2026
+
+Usage:
+- Model training using gesture data extracted using mp_gesture_extractor.py
+- Model was created from scratch without the use of transfer learning 
+
+"""
+
+
 import os
 import pandas as pd
 import numpy as np
