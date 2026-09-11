@@ -5,9 +5,11 @@ This this the main inference code used to see the TFLite model performance. The 
 is a combination of multiple model; FER/CE & Gesture.
 
 Features:
-- Facial Emotion Recognition used the ____.tflite
-- Compound FER used the ___.tflite
-- Gesture model used mediapipe for landmark and ___.tflite
+- Facial Emotion Recognition used the emosys_fer.tflite
+- Compound FER used the emosys_ce.tflite
+- Gesture model used mediapipe for landmark and 2 different gesture model
+    - gesture_model_personal.tflite
+    - gesture_model.tflite
 - Trial summary logging for clear statistic during the model run
 - Data output can be viewed in the emotionDB bucket in InfluxDB and the Main Dashboard 
 - Pushed data:
@@ -16,7 +18,12 @@ Features:
     - Gesture 
     - Gesture confidence level
     - Captured Image from the camera
-- NOTES: The image captured will be deleted immediately after being push for privacy reason
+
+ATTENTION: 
+    - The image captured will be deleted immediately after being push for privacy reason
+    - Compound emotion have no set logit calibration. Please comment the section in line 672-689. Plus, 
+      make sure to change the label and tflite model to the Compound Emotion file
+    - The default model for main_inference.py is FER Model
 
 Face detector: 
 - YuNet Face Detection 2023
@@ -56,7 +63,6 @@ from influxdb_handler import InfluxDBHandler
 import mediapipe as mp
 from mediapipe.tasks import python as mp_python
 from mediapipe.tasks.python import vision as mp_vision
-from habit_mediapipe import HabitDetector, HabitBehavior
 
 
 # ------------------------------------------
@@ -133,8 +139,8 @@ interpreter = Interpreter(model_path="model/emosys_fer.tflite")
 # Model was Quantise - no knowledge distillation
 print("Loading EmoSys CE model...")
 interpreter = Interpreter(model_path="model/emosys_ce.tflite")
-
 """
+
 
 interpreter.allocate_tensors()
 input_details = interpreter.get_input_details()
@@ -662,8 +668,12 @@ while True:
 
             preds = interpreter.get_tensor(output_details[0]['index'])[0]
 
+            """"""
+            # ===============================================================================
             # Logit calibration for the emotions levels
             # This need manual tuning based on the user environment
+            # This is only for the FER model as CE didnt touch on calibration at the moment 
+            # If want to run CE, comment this section
             calibration_biases = np.array([
                 1.6,   # Angry 
                 0.3,   # Disgust 
@@ -676,6 +686,9 @@ while True:
 
             preds = preds + calibration_biases
             preds = softmax(preds)
+            # ================================================================================
+            
+
             frame_preds[fid] = preds
 
             # ========== Per-face smoothing ========== 
