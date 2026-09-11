@@ -1,3 +1,24 @@
+"""
+Mediapipe Gesture Data Calibration - Updated 11/9/2026
+
+Usage:
+- To collect data on the user data for each gesture 
+- The data collected will be used in the _____.py for model training
+- Data collected will be:
+    - Neutral
+    - Eye Scratch 
+    - Head Scratch 
+    - Chin rest
+    - Nose Scratch 
+    - Neck Rub
+    - Fidget
+
+ATTENTION:
+- The code will need to be run with Pi CAM in RP5
+- This helps optimise the user data based on the location and the usage of the picam 
+
+"""
+
 import cv2
 import mediapipe as mp
 from mediapipe.tasks import python as mp_python
@@ -14,8 +35,16 @@ except ImportError:
     print("Warning: picamera2 not found. This script is intended to run on the Raspberry Pi.")
 
 # Configuration
-GESTURE_LABELS = ["Neutral", "Eye Scratch", "Head Scratch", "Chin Rest",
-                  "Nose Scratch", "Neck Rub", "Fidget"]
+GESTURE_LABELS = [
+    "Neutral", 
+    "Eye Scratch", 
+    "Head Scratch", 
+    "Chin Rest",
+    "Nose Scratch", 
+    "Neck Rub", 
+    "Fidget"
+]
+
 CALIBRATION_TIME = 10.0  # seconds to record per gesture
 PREP_TIME = 3.0          # seconds to prepare before recording
 
