@@ -3,7 +3,7 @@ Gesture Model Training - updated 11/9/2026
 
 Usage:
 - Model training using gesture data extracted using mp_gesture_extractor.py
-- CCN model without the use of transfer learning 
+- This script train 1D CNN model to classify 7 different human gesture
 - Data model are training:
     - Neutral 
     - Eye Scratch 
@@ -12,6 +12,7 @@ Usage:
     - Nose Scratch 
     - Neck Rub
     - Fidget
+    
 - Usage of 11 Mediapipe Pose Landmarks 
     - MediaPipe Pose landmark indices:
         0=nose, 2=left_eye, 5=right_eye, 7=left_ear, 8=right_ear,
