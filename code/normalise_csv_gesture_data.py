@@ -9,7 +9,8 @@ Run this code after gesture data already collect using collect_gesture_data_pi.p
 import pandas as pd
 import numpy as np
 import glob, os
-
+ 
+# Change the directory to the target destination
 DATA_DIR = r"C:\Users\user\Documents\Emosys\EmoSys - KD N QAT\EmoSys - KD N QAT\Gesture Dataset Pi"
 csv_files = sorted(glob.glob(os.path.join(DATA_DIR, "dataset_gesture_*.csv")))
 
