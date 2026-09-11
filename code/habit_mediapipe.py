@@ -2,9 +2,14 @@
 create new module for mediapipe as the code can be too long
 will help in making the code cleaner and easy to fine tune
 plus, finding errors specifically in mediapipe
+This code use rule based to detect the habit gesture
 
 Habit Detection Algorithm
 Detects: head scratching, nose scratching, head tilting, hand-to-face movements
+
+NOT REALLY IN USE
+- The Gesture model is mostly in use
+
 """
 
 import numpy as np
