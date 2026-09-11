@@ -5,6 +5,8 @@ Usage:
 - Use for observation only 
 - informal use to the model performance with the picam and rp5
 
+PERSONAL ARCHIVE PURPOSES
+
 """
 
 import cv2
