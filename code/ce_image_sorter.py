@@ -1,6 +1,18 @@
 """
-Compound Emotion Image Sorter - 10/9/2026
+Compound Emotion Image Sorter - updated 11/9/2026
 
+Usage:
+- Helps makes the sorting of multiple classes in compound emotion easier
+- Grid view output of the images in the raw folder for the user to sort into classes
+- The classes can be edit to match how many the user need 
+- Plus, the image will be formatted directly based on the user needs:
+    - The image size
+    - The image name: (emotions)_N.jpg
+
+To run:
+- Make sure the folder is config to the target input and output
+
+python ce_image_sorter.py
 
 """
 
@@ -236,43 +248,6 @@ class EmotionImageSorterGame:
         # Clear old selections when loading new images
         self.selected_images.clear()
         self.update_progress()
-    
-    def refresh_grid(self):
-        """Refresh the image grid display"""
-        for row_idx, row_buttons in enumerate(self.image_buttons):
-            for col_idx, btn in enumerate(row_buttons):
-                idx = row_idx * self.images_per_row + col_idx
-                
-                if idx < len(self.display_images):
-                    image_name = self.display_images[idx]
-                    image_path = os.path.join(self.raw_folder, image_name)
-                    
-                    try:
-                        # Load and resize image
-                        img = Image.open(image_path)
-                        img.thumbnail((self.thumbnail_size, self.thumbnail_size), Image.Resampling.LANCZOS)
-                        
-                        # Add padding to make square thumbnail
-                        square_img = Image.new('RGB', (self.thumbnail_size, self.thumbnail_size), (40, 40, 40))
-                        offset = ((self.thumbnail_size - img.width) // 2, (self.thumbnail_size - img.height) // 2)
-                        square_img.paste(img, offset)
-                        
-                        photo = ImageTk.PhotoImage(square_img)
-                        btn.config(image=photo, text="", compound=tk.CENTER)
-                        btn.image = photo
-                        
-                        # Apply selection styling if selected
-                        if idx in self.selected_images:
-                            btn.config(relief=tk.SUNKEN, bd=3, bg="green")
-                        else:
-                            btn.config(relief=tk.RAISED, bd=2, bg="gray30")
-                        
-                    except Exception as e:
-                        btn.config(text="❌\nError", bg="gray20")
-                else:
-                    # Empty slot
-                    btn.config(image="", text="", bg="gray20", relief=tk.FLAT)
-                    btn.image = None
     
     def select_image(self, row, col):
         """Toggle image selection"""
