@@ -4,7 +4,7 @@
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 **EmoSys** is a facial emotion recognition system designed to detect a person's facial emotion from a camera feed and present the recognition results through a local dashboard.
 
@@ -26,7 +26,7 @@ The project also explored extending the system beyond the seven basic emotions i
 
 ---
 
-## 🏢 Project Context
+## Project Context
 
 **Company:** SMD Semiconductor Sdn Bhd
 **Department:** Product Development Engineering
@@ -40,7 +40,7 @@ This repository is maintained as a **personal archive** of my development proces
 
 ---
 
-# 🎯 Project Objectives
+# Project Objectives
 
 The main objectives of EmoSys were to:
 
@@ -56,7 +56,7 @@ The main objectives of EmoSys were to:
 
 ---
 
-# 🧠 System Concept
+# System Concept
 
 The general EmoSys pipeline can be represented as:
 
@@ -133,7 +133,7 @@ The model development involved experimenting with different CNN architectures an
 
 ---
 
-# 🧪 Model Development
+# Model Development
 
 ## Initial Model Experiments
 
@@ -341,7 +341,7 @@ The idea was to investigate whether the same lightweight FER approach could be e
 
 ---
 
-# 🧠 Compound Emotion Model
+# Compound Emotion Model
 
 The compound emotion experiment used:
 
@@ -630,7 +630,7 @@ This reduces unnecessary database writes while still preserving useful historica
 
 ---
 
-# 🔌 MQTT / API Exploration
+# 🔌 Rest API Exploration
 
 The project also investigated communication between Raspberry Pi components.
 
@@ -640,7 +640,7 @@ One possible architecture was:
 Pi #1
 FER Inference
     │
-    │ MQTT / API
+    │ RestApi 
     ▼
 Pi #2
 Dashboard + Database
@@ -652,11 +652,9 @@ The purpose of separating the components was to allow:
 * Dashboard to focus on visualization
 * Database to focus on historical storage
 
-REST API output was also explored for exposing prediction information to other components.
-
 ---
 
-# 🍓 Raspberry Pi Deployment
+# Raspberry Pi Deployment
 
 A major development direction was moving EmoSys from a laptop-based prototype toward Raspberry Pi hardware.
 
@@ -738,6 +736,7 @@ Gesture / Behaviour Recognition
 ```
 
 This was considered as a potential complementary signal to facial emotion recognition.
+NOTES: The model data need to be collected using the suppose environment of suppose product output
 
 ---
 
