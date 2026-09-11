@@ -4,6 +4,21 @@ Gesture Model Training - updated 11/9/2026
 Usage:
 - Model training using gesture data extracted using mp_gesture_extractor.py
 - CCN model without the use of transfer learning 
+- Data model are training:
+    - Neutral 
+    - Eye Scratch 
+    - Head Scratch 
+    - Chin rest
+    - Nose Scratch 
+    - Neck Rub
+    - Fidget
+- Usage of 11 Mediapipe Pose Landmarks 
+    - MediaPipe Pose landmark indices:
+        0=nose, 2=left_eye, 5=right_eye, 7=left_ear, 8=right_ear,
+        9=mouth_left, 10=mouth_right, 11=left_shoulder, 12=right_shoulder,
+        13=left_elbow, 14=right_elbow, 15=left_wrist, 16=right_wrist,
+        19=left_index, 20=right_index
+
 
 """
 
