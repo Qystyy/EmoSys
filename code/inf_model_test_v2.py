@@ -1,3 +1,13 @@
+"""
+This is just for archive
+
+Inference test but the tflite file just train with QAT
+
+- Maybe the use of old model
+
+
+"""
+
 import cv2
 import numpy as np
 import os
