@@ -20,9 +20,22 @@ Usage:
         13=left_elbow, 14=right_elbow, 15=left_wrist, 16=right_wrist,
         19=left_index, 20=right_index
 
+Data Processing:
+1. Load gesture landmark data from CSV files.
+2. Convert 99 raw landmark coordinates into 41 distance, position, and
+     angle-based features to make the data more person-invariant.
+3. Group consecutive frames into 15-frame temporal sequences.
+4. Apply data augmentation using temporal warping and spatial noise.
 
+Model Training:
+- Uses a 1D Convolutional Neural Network (CNN).
+- Uses Leave-One-Person-Out cross-validation to evaluate performance on people not seen during training.
+- Trains a final model using data from all available persons.
+
+Output:
+- Saves the trained Keras model (.h5).
+- Converts the model to TensorFlow Lite (.tflite) for deployment on a Raspberry Pi
 """
-
 
 import os
 import pandas as pd
