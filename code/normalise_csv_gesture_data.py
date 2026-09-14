@@ -4,7 +4,7 @@ The CSVs already have nose-centered coordinates (pts[0] == 0,0,0).
 This script divides all coordinates by the shoulder distance (landmarks 11-12)
 to make features invariant to body proportions.
 
-Run this code after gesture data already collect using collect_gesture_data_pi.py
+Run this code after gesture data already collect using mp_gesture_extractor.py
 """
 import pandas as pd
 import numpy as np
