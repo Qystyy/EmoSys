@@ -1,3 +1,22 @@
+"""
+Gesture Finetune Personalise Model Training - updated 14/9/2026
+
+Usage:
+- To personalise the gesture model to the user 
+- Helps calibrate the mediapipe landmark to the user data
+- Input needed:
+    - Base model: gesture_model.h5
+    - calibration_data.csv
+- Output:
+    - gesture_model_personal.tflite
+
+ATTENTION:
+Before running this script, make sure the suppose file exist by running 
+gesture_model_training.py & calibrate_user.py
+
+"""
+
+
 import os
 import pandas as pd
 import numpy as np
