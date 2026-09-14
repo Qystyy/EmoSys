@@ -886,7 +886,7 @@ while True:
             print(f"Std dev         : {std_infer:.2f} ms")
             print(f"95th Percentile : {p95_infer:.2f} ms")
             
-            with open("log/qat_student_tflite_inference_speed_log.txt", "a", encoding="utf-8") as speed_log:
+            with open("log/emosys_trial_summary.txt", "a", encoding="utf-8") as speed_log:
                 speed_log.write(f"\n[{time.strftime('%Y-%m-%d %H:%M:%S')}] Trial #{run_count}\n")
                 speed_log.write(f"  Total runtime          : {total_time:.2f}s\n")
                 speed_log.write(f"  Average FPS            : {avg_fps:.1f}\n")
