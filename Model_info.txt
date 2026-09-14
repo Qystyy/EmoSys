@@ -1,0 +1,60 @@
+Checklist
+- List down the name and information for all of the model
+- Run the model experiment
+	T25:
+	- Input size: 224,224
+	- Alpha = 0.35
+	- Beta parameters
+- Run inference test 
+	T24:
+	- 128, 0.35, beta params
+- Re-evaluate T23
+- Modify GUI for the predicted output for qat_tflite_image.py
+- Arrange information for the weekly presentation
+- Arrange the information for the internship presentation
+
+PERSONAL ARCHIVE PURPOSES
+
+Model List
+
+TFlite
+
+1. 9th_final_qat_int8.tflite 
+	- Model Zero
+	- The best accuracy and performance 
+	- 224x224, alpha=1
+
+2. 11_final_qat_int8.tflite
+	- testing model for smaller size
+	- 96x96, alpha=0.35
+
+3. 15_final_qat_int8.tflite
+	- input size difference
+	- 224x224, alpha=0.35
+	- unstable model
+
+4. 16_final_qat_int8.tflite
+	- stable model for this smaller size file
+	- 224x224, alpha=0.35
+	- difference in phase training
+	- Phase 1 = Train 40 layer of parameters
+
+5. 18_final_qat_int8.tflite
+	- Add on focal loss 
+	- 224x224, alpha=0.35
+	- high confident level in prediction 
+	- image stable to detections
+
+6. 20_final_qat_int8.tflite
+	- model is bias towards angry
+	- difficulty in detecting Disgust
+	- 224x224, alpha=0.35
+	- attempt to fix focal loss
+	- fail: fix back the focal loss to T18
+
+7. 31_final_qat_int8.tflite
+	- model is stable
+	- but have difficulty in detecting fear, disgust and surprise
+	- all will be confuse with Angry
+	- 224, 0.35
+	- no other optimation other than QAT
