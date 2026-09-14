@@ -1,6 +1,6 @@
 """
 Gesture Data Collection Script - RASPBERRY PI VERSION - updated 10/9/2026
-Uses PiCamera2 + same crop as qat_student_tflite_pi.py
+Uses PiCamera2 + same crop as main_inference.py
 
 Usage:
 - Use mediapipe pose to extract gesture landmark
