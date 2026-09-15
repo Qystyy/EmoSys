@@ -3,7 +3,7 @@ Mediapipe Gesture Data Calibration - Updated 11/9/2026
 
 Usage:
 - To collect data on the user data for each gesture 
-- The data collected will be used in the _____.py for model training
+- The data collected will be used in the gesture_fintune_p_model.py for model training
 - Data collected will be:
     - Neutral
     - Eye Scratch 
