@@ -17,7 +17,7 @@ Usage:
 - Later, use for model training 
 
 Run once per gesture class:
-  python collect_gesture_data_pi.py
+  python mp_gesture_extractor.py
   -> Prompts for gesture number, opens Pi camera
   -> R = record, Space = pause, Q = quit & save
 """
