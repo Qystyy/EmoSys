@@ -26,8 +26,8 @@ push_result(detected_emotion, confidence_score, frame_jpeg_bytes, inf_speed, ges
 import requests
 from enum import Enum
 
-PI5_URL = "http://10.0.30.7:3000/api/emotion/ingest"
-TOKEN   = "e591962c78716e9fbd2677d2125b2375"
+PI5_URL = "<configure separately>"
+TOKEN   = "<configure separately>"
 
 
 def push_result (emotion, confidence, frame_jpeg_bytes, inference_speed_ms, gesture, gesture_score):
