@@ -4,7 +4,7 @@
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 **EmoSys** is a computer vision system developed to recognize facial emotions and behavioural gestures from camera input.
 
@@ -29,7 +29,7 @@ The main components explored throughout the project are:
 
 ---
 
-# 🧩 System Components
+# System Components
 
 The current EmoSys concept can be divided into three main recognition components:
 
@@ -82,7 +82,7 @@ Recognition of behavioural gestures using a dedicated gesture model, with an add
 
 ---
 
-# 🎯 Project Objectives
+# Project Objectives
 
 The main objectives of EmoSys were to:
 
@@ -99,7 +99,7 @@ The main objectives of EmoSys were to:
 
 ---
 
-# 🧠 Overall Pipeline
+# Overall Pipeline
 
 The general EmoSys pipeline is:
 
@@ -131,7 +131,7 @@ Emotion Result        Gesture Result
 
 ---
 
-# 😊 Facial Emotion Recognition
+# Facial Emotion Recognition
 
 ## Basic Emotion Model
 
@@ -151,7 +151,7 @@ The project experimented with different CNN architectures before moving toward *
 
 ---
 
-# 🧠 MobileNetV2 FER Model
+# MobileNetV2 FER Model
 
 MobileNetV2 was selected because it provides a balance between:
 
@@ -185,7 +185,7 @@ Transfer learning was used so that the model could start from a pretrained featu
 
 ---
 
-# 🔍 Face Detection
+# Face Detection
 
 **YuNet** was used for face detection.
 
@@ -220,7 +220,7 @@ A detection threshold was also adjusted during development to control the balanc
 
 ---
 
-# 🌈 Compound Emotion Recognition
+# Compound Emotion Recognition
 
 The project was later extended from seven basic emotions to a more detailed **compound emotion** model.
 
@@ -254,7 +254,7 @@ The compound emotion model uses the FER model as a starting point before further
 
 ---
 
-# 📊 Compound Emotion Experiments
+# Compound Emotion Experiments
 
 The compound emotion dataset was processed into separate training and testing sets.
 
@@ -275,7 +275,7 @@ The relatively lower performance compared with basic FER highlighted the difficu
 
 ---
 
-# 🧮 Model Calibration
+# Model Calibration
 
 A class-bias calibration experiment was performed on the compound emotion model.
 
@@ -314,7 +314,7 @@ This experiment demonstrated that calibration performance does not necessarily t
 
 ---
 
-# ✋ Gesture Recognition
+# Gesture Recognition
 
 Gesture recognition was added as another recognition component of EmoSys.
 
@@ -338,7 +338,7 @@ These gestures were selected to represent common face-touching and body-related 
 
 ---
 
-# 🧠 Gesture Model Architecture
+# Gesture Model Architecture
 
 Two gesture models were developed:
 
@@ -388,7 +388,7 @@ The purpose of the personalised model is to account for differences between peop
 
 ---
 
-# 🔄 Gesture Model Selection
+# Gesture Model Selection
 
 The main inference code supports both the base and personalised models.
 
@@ -420,7 +420,7 @@ This allows the system to operate without requiring every user to complete perso
 
 ---
 
-# 📍 Landmark-Based Gesture Recognition
+# Landmark-Based Gesture Recognition
 
 Gesture recognition makes use of landmark information to describe the user's position and movement.
 
@@ -449,7 +449,7 @@ The landmark information allows the model to distinguish gestures based on the r
 
 ---
 
-# 📈 Gesture Model Evaluation
+# Gesture Model Evaluation
 
 The gesture models were evaluated using the same general machine-learning evaluation concepts used throughout the project.
 
@@ -471,7 +471,7 @@ Because the gesture model was developed by another part of the project team, not
 
 ---
 
-# ⚙️ Model Optimization
+# Model Optimization
 
 Several model optimization techniques were explored throughout EmoSys.
 
@@ -531,7 +531,7 @@ This was particularly useful for Raspberry Pi deployment experiments.
 
 ---
 
-# 🥧 Raspberry Pi Deployment
+# Raspberry Pi Deployment
 
 A major development goal was to move inference from a conventional laptop environment toward Raspberry Pi hardware.
 
@@ -563,7 +563,7 @@ The Raspberry Pi setup was also investigated for headless operation, where a mon
 
 ---
 
-# 🖥️ Dashboard
+# Dashboard
 
 The EmoSys dashboard was developed to provide a local interface for viewing inference results.
 
@@ -581,7 +581,7 @@ The goal was to provide a simple interface for observing the system without need
 
 ---
 
-# 🗄️ InfluxDB
+# InfluxDB
 
 **InfluxDB** was explored for storing time-series inference data.
 
@@ -613,7 +613,7 @@ Gesture
 
 ---
 
-# 🔌 Communication
+# Communication
 
 The project explored communication between different system components using REST APIs and MQTT-related approaches.
 
@@ -633,7 +633,7 @@ This separation allows inference and visualization components to operate indepen
 
 ---
 
-# 🖼️ Data Preprocessing
+# Data Preprocessing
 
 Different datasets required different preprocessing steps during development.
 
@@ -662,7 +662,7 @@ Particular attention was required when working with grayscale datasets because t
 
 ---
 
-# 📊 Model Evaluation
+# Model Evaluation
 
 Several evaluation methods were used throughout the project.
 
@@ -716,7 +716,7 @@ This helps identify specific weaknesses that overall accuracy cannot show.
 
 ---
 
-# 🧪 Development Experiments
+# Development Experiments
 
 A significant portion of the project involved experimentation and debugging.
 
@@ -750,7 +750,7 @@ These experiments are retained as part of the development history to document wh
 
 ---
 
-# 💡 Key Development Lessons
+# Key Development Lessons
 
 ## Dataset preparation is critical
 
@@ -792,7 +792,7 @@ The compound emotion calibration experiment showed that improving a calibration 
 
 ---
 
-# 🚧 Current Limitations
+# Current Limitations
 
 The current system has several limitations.
 
@@ -820,7 +820,7 @@ The current system has several limitations.
 
 ---
 
-# 🔮 Future Improvements
+# Future Improvements
 
 Possible future improvements include:
 
@@ -886,7 +886,7 @@ EmoSys/
 
 ---
 
-# 🔐 Confidentiality
+# Confidentiality
 
 This repository is maintained as a **personal archive** of the development process.
 
@@ -910,7 +910,7 @@ Where an experiment depends on confidential material, only a high-level descript
 
 ---
 
-# 🛠️ Technologies Explored
+# Technologies Explored
 
 | Area                          | Technology                                            |
 | ----------------------------- | ----------------------------------------------------- |
@@ -930,7 +930,7 @@ Where an experiment depends on confidential material, only a high-level descript
 
 ---
 
-# 🧭 Development Timeline
+# Development Timeline
 
 ```text
 Basic FER
@@ -973,7 +973,7 @@ Personalised Gesture Model
 
 ---
 
-# 📌 Current Project State
+# Current Project State
 
 EmoSys has progressed from a basic facial emotion recognition prototype into a broader **emotion and behaviour recognition system**.
 
@@ -1005,7 +1005,7 @@ Local visualization and time-series storage using a dashboard and InfluxDB.
 
 ---
 
-# 📚 Personal Project Notes
+# Personal Project Notes
 
 EmoSys involved a combination of machine-learning development, computer vision, embedded deployment, and system integration.
 
@@ -1029,7 +1029,7 @@ Keeping these experiments is useful for documenting the reasoning behind later c
 
 ---
 
-## 📅 Archive Information
+## Archive Information
 
 **Project:** EmoSys
 **Project Type:** Internship Project
