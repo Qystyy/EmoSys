@@ -20,7 +20,6 @@ The main components explored throughout the project are:
 * Gesture recognition
 * User-personalised gesture recognition
 * Confidence scoring
-* Stress-related interpretation
 * Emotion and gesture history
 * Local dashboard
 * InfluxDB data storage
@@ -96,7 +95,7 @@ The main objectives of EmoSys were to:
 7. Deploy inference on Raspberry Pi hardware.
 8. Provide real-time results through a local dashboard.
 9. Store emotion and gesture history.
-10. Explore stress-related interpretation from recognized behaviour and emotions.
+
 
 ---
 
@@ -575,7 +574,6 @@ The dashboard can present information such as:
 * Top-3 emotion predictions
 * Emotion history
 * Gesture results
-* Stress-related indicators
 * Historical graphs
 * Prediction logs
 
@@ -610,7 +608,6 @@ Example information:
 Timestamp
 Emotion
 Confidence
-Stress State
 Gesture
 ```
 
@@ -633,37 +630,6 @@ Dashboard + Database
 ```
 
 This separation allows inference and visualization components to operate independently.
-
----
-
-# 😰 Stress Interpretation
-
-EmoSys also explored using emotion and behavioural information to produce a **stress-related indicator**.
-
-The stress component is based on system rules and detected patterns rather than being a medical diagnostic model.
-
-Conceptually:
-
-```text
-Emotion
-   +
-Gesture / Behaviour
-   +
-Temporal Pattern
-        │
-        ▼
- Stress Indicator
-```
-
-Potential signals include:
-
-* Sustained negative emotions
-* Emotion changes
-* Gesture frequency
-* Repeated face-touching behaviour
-* Sudden changes in detected state
-
-The stress output should therefore be interpreted as a system-level behavioural indicator rather than a clinical measurement.
 
 ---
 
@@ -851,7 +817,6 @@ The current system has several limitations.
 * Raspberry Pi performance may limit real-time inference.
 * Headless deployment can introduce GUI/display issues.
 * Communication between components adds additional system complexity.
-* Stress interpretation should not be treated as medical diagnosis.
 
 ---
 
@@ -866,7 +831,6 @@ Possible future improvements include:
 * Temporal emotion modelling
 * Temporal gesture modelling
 * Multi-modal emotion and behaviour recognition
-* Better stress-state modelling
 * Improved uncertainty estimation
 * Further model compression
 * Raspberry Pi inference optimization
