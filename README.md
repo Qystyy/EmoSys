@@ -840,53 +840,48 @@ Possible future improvements include:
 
 ---
 
-# 🗂️ Suggested Archive Structure
+# Archive Structure
 
 ```text
 EmoSys/
 │
 ├── README.md
 │
-├── docs/
-│   ├── project-notes/
-│   ├── weekly-updates/
-│   ├── architecture/
-│   └── experiments/
+├── model/
+│    ├── notebooks/
+│        ├── emosys_fer_model_training/
+│        ├── cer_mobilenetc2/
+│        ├── gesture_finetune_p_model.py/
+│        └── gesture_model_training.py/
+│    ├── tflite/
+│        ├── emosys_fer/
+│        ├── emosys_ce/
+│        ├── gesture_model_personal/
+│        └── gesture_model/
 │
-├── models/
-│   ├── basic-fer/
-│   ├── compound-fer/
-│   ├── gesture/
-│   ├── personalised-gesture/
-│   ├── qat/
-│   └── tflite/
+├── code/
+│   ├── influxdb_handler/
+│   ├── main_inference/
+│   ├── push_module/
+│   └── test_cam/
+│   
 │
-├── notebooks/
-│   ├── training/
-│   ├── evaluation/
-│   └── calibration/
+├── run_counter/
+│   └── emosys_run_counter/
 │
-├── src/
-│   ├── face-detection/
-│   ├── emotion/
-│   ├── gesture/
-│   ├── inference/
-│   └── dashboard/
+├── face_detection_yunet_20023mar.onnx
 │
-├── experiments/
-│   ├── dataset/
-│   ├── quantization/
-│   ├── compound-emotion/
-│   ├── calibration/
-│   └── gesture/
+├── labels_CE.json
 │
-├── results/
-│   ├── graphs/
-│   ├── confusion-matrices/
-│   └── evaluation/
+├── labels_FER.json
 │
-└── archive/
-    └── old-experiments/
+├── model_info.txt
+│
+├── model_requirements.txt
+│
+├── pose_landmarker_lite.task
+│
+└── requirements.txt
 ```
 
 ---
